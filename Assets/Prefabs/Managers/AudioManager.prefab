@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8814155391384313789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8814155391384313731}
+  - component: {fileID: 8814155391384313788}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8814155391384313731
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814155391384313789}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.977972, y: -0.93300605, z: -0.44932157}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8814155391384313788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8814155391384313789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1db7a25c657ddf46a8e735dabf221d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - Name: 0
+    Clip: {fileID: 8300000, guid: 91bc701518d3500448de3bc6a6e23e0d, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 1
+    Clip: {fileID: 8300000, guid: 32dd7d2da35555b43b49701c70f9a46d, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 2
+    Clip: {fileID: 8300000, guid: 05e8dc1e07a376d42acb9a1c6c7de6f8, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 0.7
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 3
+    Clip: {fileID: 8300000, guid: e58622265b148c346965e34edf7a97ce, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 4
+    Clip: {fileID: 8300000, guid: e940c8d1d8d7ed54db33569af0c193f2, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 6
+    Clip: {fileID: 8300000, guid: 32dd7d2da35555b43b49701c70f9a46d, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 7
+    Clip: {fileID: 8300000, guid: 2f8b42ca97171af45b1f4e756139ef9d, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 8
+    Clip: {fileID: 8300000, guid: f317a5813de529d4f8695357a23847dd, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 5
+    Clip: {fileID: 8300000, guid: 55e41c07a642c224dbeab06201fbc8ee, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 9
+    Clip: {fileID: 8300000, guid: 6f87d4f4a26592742a2b348208756e6b, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 11
+    Clip: {fileID: 8300000, guid: ebb763199b71ffd4aae03389f0c2c8f8, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 1
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 10
+    Clip: {fileID: 8300000, guid: 5719c01cc3b385e40822278fcd937bf2, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 1
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 12
+    Clip: {fileID: 8300000, guid: 2e26ccfc6044c0949a3cf8b141f14df9, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 0
+    Loop: 1
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  - Name: 13
+    Clip: {fileID: 8300000, guid: 47360d0f8d2014343b2fcb3c6c6c8584, type: 3}
+    Output: {fileID: 0}
+    PlayOneShot: 1
+    Loop: 0
+    PlayOnAwake: 0
+    Volume: 1
+    Pitch: 1
+    Source: {fileID: 0}
+  game: 0
+  tutorial: 1
