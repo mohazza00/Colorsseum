@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
-
+using UnityEngine.UI;
 public enum GameState
 {
     SPANWING_WAVE,
@@ -53,6 +53,7 @@ public class GameManager : Singleton<GameManager>
     public TextMeshProUGUI waveCleared;
     public GameObject gameClear;
     public GameObject pauseMenuUI;
+    public Button resumeButton;
 
     public ArrowsSpawner appleSpawner;
 
@@ -192,6 +193,7 @@ public class GameManager : Singleton<GameManager>
     public void Pause()
     {
         pauseMenuUI.SetActive(true);
+        resumeButton.Select();
         Time.timeScale = 0f;
         gameIsPaused = true;
     }

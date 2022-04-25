@@ -20,7 +20,7 @@ public class Archer : Enemy
     {
         base.Update();
 
-        if (frozen)
+        if (frozen && currentState != EnemyState.KNOCKED_BACK)
             return;
 
         if (gameManager.gameState == GameState.SPANWING_WAVE || gameManager.gameState == GameState.SPAWNING_MINIONS_WAVE)

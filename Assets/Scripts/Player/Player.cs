@@ -66,7 +66,8 @@ public class Player : MonoBehaviour
             rb.velocity = Vector2.zero;
             currentState = State.MOVEMENT;
             return;
-        }         
+        }
+
 
         if(gameOver)
         {
@@ -81,6 +82,10 @@ public class Player : MonoBehaviour
         }
         else
         {
+
+            if (GameManager.gameIsPaused)
+                return;
+
             switch (currentState)
             {
                 case State.MOVEMENT:

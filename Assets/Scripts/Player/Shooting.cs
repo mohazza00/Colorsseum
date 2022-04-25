@@ -37,7 +37,11 @@ public class Shooting : MonoBehaviour
         }
         else
         {
-            if(replayUIAnimation)
+            if (GameManager.gameIsPaused)
+                return;
+
+
+            if (replayUIAnimation)
             {
                 for (int i = 0; i < arrowsUI.Length; i++)
                 {

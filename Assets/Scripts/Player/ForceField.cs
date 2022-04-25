@@ -13,6 +13,12 @@ public class ForceField : MonoBehaviour
         player = transform.root.GetComponent<Player>();    
     }
 
+    private void OnEnable()
+    {
+        GetComponent<CircleCollider2D>().enabled = false;
+        GetComponent<CircleCollider2D>().enabled = true;
+    }
+
     private void OnDisable()
     {
         affectedEnemies.Clear();

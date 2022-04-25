@@ -8,6 +8,10 @@ public class MainMenu : MonoBehaviour
 {
     public Button playButton;
 
+    private void Start()
+    {
+        playButton.Select();
+    }
     public void PlayGame()
     {
         SceneManager.LoadScene(2);

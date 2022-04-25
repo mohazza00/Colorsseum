@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1620038c02eed4ba70935abb22f329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 2
+  arrowType: 2
   damage: 1
   forceBack: 0
   canDamagePlayer: 0

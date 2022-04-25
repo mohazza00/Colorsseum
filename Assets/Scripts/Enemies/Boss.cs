@@ -41,6 +41,8 @@ public class Boss : Enemy
         currentHealth = maxHealth;
         changeColorTimer = Random.Range(3f, 7f);
         animator.runtimeAnimatorController = animators[0];
+        gameObject.layer = LayerMask.NameToLayer("FlyingEnemy"); //can pass through arena edges
+
     }
 
     protected override void Update()

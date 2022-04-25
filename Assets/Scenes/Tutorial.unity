@@ -290,7 +290,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52128bdd2e4a7a4bbfb3fab0416ed8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: 0
   spawningGates:
   - gateNumber: 0
     spawningGate: 2
@@ -381,14 +380,11 @@ MonoBehaviour:
     - {fileID: 6489569626700001154, guid: 4370b7b628153104ab8cf09ed2f11804, type: 3}
     - {fileID: 6489569626700001154, guid: 4370b7b628153104ab8cf09ed2f11804, type: 3}
     - {fileID: 6489569626700001154, guid: 4370b7b628153104ab8cf09ed2f11804, type: 3}
-  doors:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  bridges: []
   minionsWaves: []
   enemiesParentTransform: {fileID: 835243285}
   spawningDelay: 0.5
+  state: 0
   nextWave: 0
   nextMinionWave: -1
 --- !u!1 &52585734
@@ -26115,7 +26111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1936914638}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32f137847f5bead4e90cb90696140899, type: 3}
+  m_Script: {fileID: 11500000, guid: 08cb35bc389e8ee4287d9e81589fa986, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slides:
@@ -27508,7 +27504,7 @@ MonoBehaviour:
   movementSpeed: 300
   dashSpeed: 750
   playerForwardDir: {x: 0, y: 0}
-  tutorial: {fileID: 1936914643}
+  tutorialManager: {fileID: 1936914643}
 --- !u!61 &3175844615871774054
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -27664,6 +27660,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6586706334799396313, guid: acfdc3712edff1246a8f32430744e72c, type: 3}
       propertyPath: tutorial
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586706334799396313, guid: acfdc3712edff1246a8f32430744e72c, type: 3}
+      propertyPath: tutorialManager
       value: 
       objectReference: {fileID: 1936914643}
     - target: {fileID: 6586706334799396316, guid: acfdc3712edff1246a8f32430744e72c, type: 3}
