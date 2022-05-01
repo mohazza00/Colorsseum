@@ -603,7 +603,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 68880
+    m_Bits: 199952
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 626fb9cc2856ae34595d24249c8d6107, type: 2}
   m_TargetDisplay: 0
@@ -40244,11 +40244,19 @@ PrefabInstance:
     - target: {fileID: 4855612791755256575, guid: 1bf9649624a215c42b2a127c6ad740c1, type: 3}
       propertyPath: skill_1
       value: 
-      objectReference: {fileID: 8744870819726064755, guid: 931061278a5a3d24e979ba4e7297c80e, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 4855612791755256575, guid: 1bf9649624a215c42b2a127c6ad740c1, type: 3}
       propertyPath: skill_2
       value: 
-      objectReference: {fileID: 6083781707667505652, guid: cfa70cce1c9c0db4992b7d515d449379, type: 3}
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855612791755256575, guid: 1bf9649624a215c42b2a127c6ad740c1, type: 3}
+      propertyPath: skill_3
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4855612791755256575, guid: 1bf9649624a215c42b2a127c6ad740c1, type: 3}
+      propertyPath: skill_4
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4855612791755256575, guid: 1bf9649624a215c42b2a127c6ad740c1, type: 3}
       propertyPath: skill_1_image
       value: 

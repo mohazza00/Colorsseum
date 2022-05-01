@@ -34,7 +34,6 @@ public class PlayerTutorial : MonoBehaviour
     private bool right;
     private bool left;
     private bool dash;
-    private bool isDashing;
 
     private void Awake()
     {

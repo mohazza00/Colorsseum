@@ -24,6 +24,7 @@ public class TutorialManager : MonoBehaviour
     [Header("Reference Variables")]
     public EnemyTutorial enemy;
     public ArrowsSpawner arrowsSpawner;
+    public ShootingTutorial shootingTutorial;
 
     private void Start()
     {
@@ -104,6 +105,7 @@ public class TutorialManager : MonoBehaviour
         slides[4].SetActive(false);
         arrowsSpawner.spawnForTutorial = true;
         checkingShooting = true;
+        shootingTutorial.arrowsUI[0].GetComponent<Animator>().SetBool("Selected", true);
         currentSlide++;
     }
 

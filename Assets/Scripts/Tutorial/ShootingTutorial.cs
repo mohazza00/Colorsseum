@@ -6,33 +6,25 @@ using UnityEngine.UI;
 public class ShootingTutorial : MonoBehaviour
 {
 
-    public GameObject[] bulletsPrefabs;
+
     PlayerTutorial player;
 
-    public Image[] bulletsUI;
-    public int currentBullet = 0;
+    public Image[] arrowsUI;
+    public float shootingForce = 10f;
 
-    public float bulletForce = 20f;
-
-    public bool chargingShot;
-
-    private bool replayUIAnimation;
+    private int currentArrow = 0;
+    private int numberOfArrowColors = 4;
 
     [Header("Input Checking")]
-    bool change;
-    bool shoot;
-    bool kill;
+    private bool changeArrow;
+    private bool shoot;
 
     private void Awake()
     {
         player = GetComponent<PlayerTutorial>();
     }
 
-    private void Start()
-    {
-        bulletsUI[0].GetComponent<Animator>().SetBool("Selected", true);
-        
-    }
+    
     private void Update()
     {
 
@@ -44,24 +36,24 @@ public class ShootingTutorial : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.K))
         {
-            if (currentBullet == bulletsPrefabs.Length - 1)
+            if (currentArrow == numberOfArrowColors - 1)
             {
-                currentBullet = 0;
+                currentArrow = 0;
             }
             else
             {
-                currentBullet++;
+                currentArrow++;
             }
-            for (int i = 0; i < bulletsUI.Length; i++)
+            for (int i = 0; i < arrowsUI.Length; i++)
             {
-                if (i == currentBullet)
+                if (i == currentArrow)
                 {
-                    bulletsUI[i].GetComponent<Animator>().SetBool("Selected", true);
+                    arrowsUI[i].GetComponent<Animator>().SetBool("Selected", true);
 
                 }
                 else
                 {
-                    bulletsUI[i].GetComponent<Animator>().SetBool("Selected", false);
+                    arrowsUI[i].GetComponent<Animator>().SetBool("Selected", false);
                 }
             }
         }      
@@ -91,7 +83,7 @@ public class ShootingTutorial : MonoBehaviour
 
     private void Shoot()
     {
-        GameObject bullet = SpawnArrow(currentBullet);
+        GameObject bullet = SpawnArrow(currentArrow);
         if (bullet != null)
         {
             AudioManager.Instance.PlaySound(SoundName.SHOOT);
@@ -99,8 +91,8 @@ public class ShootingTutorial : MonoBehaviour
             bullet.transform.rotation = Unit.SetArrowRotation(player.playerForwardDir.normalized);
             bullet.SetActive(true);
             Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-            rb.AddForce(player.playerForwardDir.normalized * bulletForce, ForceMode2D.Impulse);
-            UseArrow(currentBullet);
+            rb.AddForce(player.playerForwardDir.normalized * shootingForce, ForceMode2D.Impulse);
+            UseArrow(currentArrow);
         }
 
     }
@@ -122,16 +114,16 @@ public class ShootingTutorial : MonoBehaviour
 
     private bool CheckIfCanShoot()
     {
-        if (currentBullet == 0 && player.inventory.yellowArrows > 0)
+        if (currentArrow == 0 && player.inventory.yellowArrows > 0)
             return true;
 
-        else if (currentBullet == 1 && player.inventory.redArrows > 0)
+        else if (currentArrow == 1 && player.inventory.redArrows > 0)
             return true;
 
-        else if (currentBullet == 2 && player.inventory.blueArrows > 0)
+        else if (currentArrow == 2 && player.inventory.blueArrows > 0)
             return true;
 
-        else if (currentBullet == 3 && player.inventory.greenArrows > 0)
+        else if (currentArrow == 3 && player.inventory.greenArrows > 0)
             return true;
 
         return false;
@@ -175,14 +167,14 @@ public class ShootingTutorial : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.K))
         {
-            change = true;
+            changeArrow = true;
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
             shoot = true;
         }
 
-        if (change && shoot && player.tutorialManager.killedEnemy)
+        if (changeArrow && shoot && player.tutorialManager.killedEnemy)
         {
             player.tutorialManager.FinishShootingCheck();
             player.ResetPlayerTransform();

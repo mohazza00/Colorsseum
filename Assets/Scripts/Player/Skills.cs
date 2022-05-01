@@ -124,31 +124,31 @@ public class Skills : MonoBehaviour
                 break;
 
             case ItemType.FREEZE_WATCH:
-                UseFreezeWatch(skill, slot);
+                StartCoroutine(_ActivateFreeze(skill, slot));
                 break;
 
             case ItemType.COLOR_BOMB:
-                UseColorBomb(skill, slot);
+                StartCoroutine(_ActivateBomb(skill, slot));
                 break;
 
             case ItemType.SHIELD:
-                UseShield(skill, slot);
+                StartCoroutine(_ActivateShield(skill, slot));
                 break;
 
             case ItemType.ARROWS_MAGNET:
-                UseMagnet(skill, slot);
+                StartCoroutine(_ActivateMagnet(skill, slot));
                 break;
 
             case ItemType.DOUBLE_DASH:
-                UseDoubleDash(skill, slot);
+                StartCoroutine(_ActivateDoubleDash(skill, slot));
                 break;
 
             case ItemType.INFINITE_ARROWS:
-                UseInfiniteArrows(skill, slot);
+                StartCoroutine(_ActivateInfiniteArrows(skill, slot));
                 break;
 
             case ItemType.FORCE_FIELD:
-                UseForceField(skill, slot);
+                StartCoroutine(_ActivateForceField(skill, slot));
                 break;
         }
     }
@@ -241,8 +241,6 @@ public class Skills : MonoBehaviour
         }
     }
 
-   
-
     private void UsePotion(Item item, int slot)
     {
         player.damageDetector.RegainHealth(5);
@@ -256,12 +254,6 @@ public class Skills : MonoBehaviour
         if (slot == 2) skill_3 = null;
         if (slot == 3) skill_4 = null;
 
-    }
-
-    private void UseShield(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateShield(skill, slot));
-        StartCoroutine(_ActivateShield(skill, slot));
     }
 
     IEnumerator _ActivateShield(Item skill, int slot)
@@ -280,12 +272,6 @@ public class Skills : MonoBehaviour
         DeactivateSkill(skill, slot);
     }
 
-    private void UseDoubleDash(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateDoubleDash(skill, slot));
-        StartCoroutine(_ActivateDoubleDash(skill, slot));
-    }
-
     IEnumerator _ActivateDoubleDash(Item skill, int slot)
     {
         player.canDoubleDash = true;
@@ -297,12 +283,6 @@ public class Skills : MonoBehaviour
 
         DeactivateSkill(skill, slot);
 
-    }
-
-    private void UseMagnet(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateMagnet(skill, slot));
-        StartCoroutine(_ActivateMagnet(skill, slot));
     }
 
     IEnumerator _ActivateMagnet(Item skill, int slot)
@@ -318,13 +298,6 @@ public class Skills : MonoBehaviour
         DeactivateSkill(skill, slot);
     }
 
-
-    private void UseFreezeWatch(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateFreeze(skill, slot));
-        StartCoroutine(_ActivateFreeze(skill, slot));
-    }
-
     IEnumerator _ActivateFreeze(Item skill, int slot)
     {
         GameManager.Instance.freezeEnemies = true;
@@ -336,13 +309,6 @@ public class Skills : MonoBehaviour
 
         DeactivateSkill(skill, slot);
 
-    }
-
-
-    private void UseColorBomb(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateBomb(skill, slot));
-        StartCoroutine(_ActivateBomb(skill, slot));
     }
 
     IEnumerator _ActivateBomb(Item skill, int slot)
@@ -360,13 +326,6 @@ public class Skills : MonoBehaviour
 
     }
 
-
-    private void UseInfiniteArrows(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateInfiniteArrows(skill, slot));
-        StartCoroutine(_ActivateInfiniteArrows(skill, slot));
-    }
-
     IEnumerator _ActivateInfiniteArrows(Item skill, int slot)
     {
         GameManager.Instance.infiniteArrows = true;
@@ -382,12 +341,6 @@ public class Skills : MonoBehaviour
 
         DeactivateSkill(skill, slot);
 
-    }
-
-    private void UseForceField(Item skill, int slot)
-    {
-        StopCoroutine(_ActivateForceField(skill, slot));
-        StartCoroutine(_ActivateForceField(skill, slot));
     }
 
     IEnumerator _ActivateForceField(Item skill, int slot)
@@ -414,9 +367,7 @@ public class Skills : MonoBehaviour
         if (rand == 3) return UnitColor.YELLOW;
 
         return UnitColor.NONE;
-
     }
-
 
     private void ActivateSkill(Item skill, int slot)
     {
